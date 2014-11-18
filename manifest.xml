@@ -12,4 +12,8 @@
 		<type>elgg_release</type>
 		<version>1.9</version>
 	</requires>
+	<requires>
+		<type>plugin</type>
+		<name>web_services</name>
+	</requires>
 </plugin_manifest>
