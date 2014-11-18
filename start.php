@@ -27,7 +27,7 @@ function moodle_integration_init() {
 	include_post_data();
 
 	// Define the api methods for REST
-	expose_function(
+	elgg_ws_expose_function(
 		'elgg.get_auth_token',
 		'api_moodle_integration_get_token', array(
 			'username' => array('type' => 'string'),
@@ -36,21 +36,21 @@ function moodle_integration_init() {
 		), elgg_echo('moodle_integration:gettoken:description'),'POST', true, false
 	);
 
-	expose_function(
+	elgg_ws_expose_function(
 		'elgg.get_groupGUID',
 		'api_moodle_integration_get_group_guid', array(
 			'shortname' => array('type' => 'string'),
 		), '', 'POST', true, false
 	);
 
-	expose_function(
+	elgg_ws_expose_function(
 		'elgg.get_group_discussions',
 		'api_moodle_integration_get_group_discussions', array(
 			'group_guid' => array('type' => 'int')
 		), '', 'POST', true, false
 	);
 
-	expose_function(
+	elgg_ws_expose_function(
 		'elgg.get_objects',
 		'api_moodle_integration_get_objects', array(
 			'object_type' => array('type' => 'string'),
