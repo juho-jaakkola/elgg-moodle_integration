@@ -3,9 +3,9 @@
 /**
  * Get the guid of the group associated with the Moodle course.
  * Create a new one if group is not found.
- * 
+ *
  * @param $shortname string Shortname of the Moodle course
- * @return int GUID of the group 
+ * @return int GUID of the group
  */
 function api_moodle_integration_get_group_guid($shortname) {
 	global $CONFIG;
@@ -56,9 +56,9 @@ function api_moodle_integration_get_group_guid($shortname) {
 
 /**
  * Get latest discussions of the group.
- * 
+ *
  * Note that get only the discussions which have at least one reply.
- * 
+ *
  * @param int $group_guid
  * @return array $return Array of discussion items
  */
@@ -76,8 +76,8 @@ function api_moodle_integration_get_group_discussions($group_guid){
 	if ($forum = elgg_get_entities_from_annotations($options)) {
 		foreach($forum as $message){
 			$return[] = array(
-				'title' => $message->title, 
-				'url' => $message->getUrl(), 
+				'title' => $message->title,
+				'url' => $message->getUrl(),
 				'time' => elgg_get_friendly_time($message->time_created),
 				'user' => $message->getOwnerEntity()->name
 			);
@@ -89,7 +89,7 @@ function api_moodle_integration_get_group_discussions($group_guid){
 
 /**
  * Get any Elgg objects tagged with the shortname of Moodle course.
- * 
+ *
  * @param string $object_type Sybtype of the objecy (file, blog, messages)
  * @param string $tag Moodle course shortname
  * @return array $return Array of object information

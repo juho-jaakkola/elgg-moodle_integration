@@ -1,7 +1,7 @@
 <?php
 /**
  * Moodle integration plugin.
- * 
+ *
  * Provides data through the rest API to be used in external applications.
  *
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
@@ -65,7 +65,7 @@ function moodle_integration_init() {
  * If authentication is succesfull with given parameters,
  * generates an authentication token that can be used to
  * authenticate future requests.
- * 
+ *
  * @param string $username
  * @param string $microtime
  * @param string $code
@@ -93,7 +93,7 @@ function api_moodle_integration_get_token($username, $name, $email) {
 
 /**
  * Create a new user.
- * 
+ *
  * @param string $username
  * @param string $name
  * @param string $email
@@ -170,7 +170,7 @@ MSG;
 
 /**
  * This fixes the post parameters that are munged due to page handler
- * 
+ *
  * This was removed from core in Elgg 1.8 due to adding %{QUERY_STRING} in .htaccess.
  * For some reason the POST variables aren't however available without this.
  */
@@ -203,7 +203,7 @@ function include_post_data() {
 
 /**
  * Add the short name of moodle course to group profile fields.
- * 
+ *
  * @param  string $hook
  * @param  string $entity_type
  * @param  array  $returnvalue

@@ -18,5 +18,5 @@ $english = array(
 	'APIException:GetGroupGuid:UnableToCreateGroup' => 'Unable to create Elgg group. Please contact site administrator.',
 	'APIException:UnknownError' => 'Unknown API error. Please contact site administrator.',
 );
-	
+
 add_translation('en', $english);
