@@ -16,4 +16,9 @@
 		<type>plugin</type>
 		<name>web_services</name>
 	</requires>
+	<requires>
+		<type>priority</type>
+		<priority>after</priority>
+		<plugin>web_services</plugin>
+	</requires>
 </plugin_manifest>
