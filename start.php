@@ -20,6 +20,8 @@ require_once('moodle_elgg_api.php');
  * Initialise plugin.
  */
 function moodle_integration_init() {
+	elgg_load_library('elgg:ws');
+
 	// Register a plugin hook to modify Elgg group profile fields
 	elgg_register_plugin_hook_handler('profile:fields', 'group', 'moodle_integration_group_profile');
 
