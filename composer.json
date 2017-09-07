@@ -1,0 +1,8 @@
+{
+	"name": "juho-jaakkola/elgg-moodle_integration",
+	"type": "elgg-plugin",
+	"license": "GPL-2.0",
+	"extra": {
+		"installer-name": "moodle_integration"
+	}
+}
